@@ -1,0 +1,21 @@
+[package]
+name = "demo-to-learn-rust"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.81"
+futures = { version = "0.3", features = ["compat", "thread-pool"] }
+futures-util = { version = "0.3", default-features = false, features = ["io"] }
+tokio = { version = "1.17", features = ["full"] }
+tokio-util = { version = "0.7", features = ["rt"] }
+opentelemetry = "0.22.0"
+opentelemetry-otlp = { version = "0.15.0", features = ["tonic"] }
+opentelemetry_sdk = { version = "0.22.1", features = ["rt-tokio"] }
+tracing = "0.1.40"
+tracing-appender = "0.2.3"
+tracing-opentelemetry = "0.23.0"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
